@@ -90,7 +90,7 @@ private:
 // Generic simulated annealing implementation.
 template <typename State, typename Energy = double, typename Temperature = double,
     typename Generator = std::mt19937_64, typename Count = size_t,
-    typename std::enable_if<std::is_signed<Energy>::value && std::is_arithmetic<Temperature>::value && std::is_arithmetic<Count>::value>::type* = 0>
+    typename std::enable_if<std::is_arithmetic<Energy>::value && std::is_arithmetic<Temperature>::value && std::is_arithmetic<Count>::value>::type* = 0>
 class SimulatedAnnealer {
     public:
         using EnergyFunc = Energy(*)(State);
