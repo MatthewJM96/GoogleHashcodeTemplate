@@ -75,16 +75,16 @@ private:
 };
 
 /// Interface for solvers.
+template <typename Result>
 class ISolver {
-    using REPLACE_ME = bool;
 public:
     virtual void solve() = 0;
 
-    REPLACE_ME getResult() const {
+    Result getResult() const {
         return m_result;
     }
 private:
-    REPLACE_ME m_result;
+    Result m_result;
 };
 
 // Generic simulated annealing implementation.
