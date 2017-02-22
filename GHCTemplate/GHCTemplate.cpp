@@ -161,7 +161,6 @@ class SimulatedAnnealer {
                 }
 
                 Temperature t = m_temperatureFunc(count);
-                //std::cout << t << "  -  " << newEnergy << std::endl;
                 if (newEnergy < oldEnergy || std::exp((oldEnergy - newEnergy) / t) > randFunc(generator)) {
                     oldState = std::move(newState);
                     oldEnergy = std::move(newEnergy);
@@ -180,8 +179,10 @@ class SimulatedAnnealer {
         NextFunc        m_nextFunc;
 };
 
-int main() {
+// TODO: Implement solvers.
 
+int main() {
+    // TODO: Tie it all together!
 
     std::cout << "Press any key to exit..." << std::endl;
     getchar();
